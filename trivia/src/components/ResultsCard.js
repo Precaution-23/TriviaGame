@@ -4,11 +4,10 @@ import WrongIcon from "./Icons/WrongIcon";
 
 function ResultsCard({message}) {
   return (
-    <div className="bg-slate-300 p-5 w-[50%] rounded-md">
+    <div className="results-card">
       <div className="flex justify-between">
-          <div>{message}</div>
-          <div><WrongIcon /></div>
-            
+          <div className="results-message">{message}</div>
+          <div><CorrectIcon /></div>  
       </div>
     </div>
   );

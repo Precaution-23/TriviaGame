@@ -3,8 +3,8 @@ import MessageOutput3 from "./ScreeMessages/MessageOutput3";
 
 function QuestionCard({ message }) {
   return (
-    <div className=" bg-slate-300 p-5 w-[50%] rounded-md">
-      <div>
+    <div className="question-card">
+      <div className="quiz-question">
         <span className="font-bold">Question:</span> {message}
       </div>
 
