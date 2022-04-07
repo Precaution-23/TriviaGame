@@ -1,15 +1,14 @@
 import React from "react";
-import MessageOutput1 from "./ScreeMessages/MessageOutput1";
+import CorrectIcon from "./Icons/CorrectIcon";
+import WrongIcon from "./Icons/WrongIcon";
 
-function ResultsCard() {
+function ResultsCard({message}) {
   return (
-    <div>
-      <div className="text-center mb-5">
-        <MessageOutput1 message="Category : Science" />
-      </div>
-
-      <div className="bg-slate-300 p-5 w-[50%] rounded-md">
-            ferger
+    <div className="bg-slate-300 p-5 w-[50%] rounded-md">
+      <div className="flex justify-between">
+          <div>{message}</div>
+          <div><WrongIcon /></div>
+            
       </div>
     </div>
   );
