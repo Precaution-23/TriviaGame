@@ -18,7 +18,7 @@ function ResultsScreen() {
   return (
     <div>
       <div className="text-center mb-5">
-        <MessageOutput1 message={`You Scored ` + getCorrectAnswers() + "/15"} />
+        <MessageOutput1 message={`You Scored ` + getCorrectAnswers() + "/" + quizResults.length} />
       </div>
 
       <div className="">

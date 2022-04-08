@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import MessageOutput3 from "./ScreeMessages/MessageOutput3";
 import MessageOutput1 from "./ScreeMessages/MessageOutput1";
 import { useNavigate } from "react-router-dom"
+import parse from 'html-react-parser';
+
 
 function QuestionCard() {
   let navigate = useNavigate();
@@ -67,13 +69,13 @@ function QuestionCard() {
               <MessageOutput1 message={question?.category} />
             </div>
             <div className="quiz-question">
-              <span className="font-bold">Question:</span> {question?.question}
+              <span className="font-bold">Question:</span> {parse(`${question?.question}`)}
             </div>
 
             <div className="flex justify-end">
               <div>
                 <button
-                  className="boolean-buttons bg-cyan-500"
+                  className="boolean-buttons bg-blue-700"
                   onClick={() => {
                     registerUserChoice(question?.id, trueButton);
                   }}
@@ -83,7 +85,7 @@ function QuestionCard() {
               </div>
               <div>
                 <button
-                  className="boolean-buttons bg-slate-500"
+                  className="boolean-buttons bg-blue-700"
                   onClick={() => {
                     registerUserChoice(question?.id, falseButton);
                   }}
@@ -93,7 +95,7 @@ function QuestionCard() {
               </div>
             </div>
             <div className="flex justify-end mt-3">
-              <MessageOutput3 message={question?.id + "/15"} />
+              <MessageOutput3 message={question?.id + "/" + quizQuestions?.length} />
             </div>
           </div>
     </div>
