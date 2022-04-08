@@ -19,7 +19,7 @@
     }
 
     .question-card{
-        @apply bg-slate-300 p-5 md:w-[50%] w-[90%] ipad:w-[90%] ipad-pro:w-[90%] rounded-md;
+        @apply bg-slate-300 p-5 md:w-[50%] w-[90%] ipad:w-[90%] ipad-pro:w-[90%] rounded-md mb-10 md:h-72 h-[50%] ipad-pro:h-[50%] ipad:h-[50%];
     }
 
     .quiz-question{
@@ -27,10 +27,10 @@
     }
 
     .results-card {
-        @apply bg-slate-300 p-5 md:w-[50%] w-[90%] ipad:w-[90%] ipad-pro:w-[90%] rounded-md;
+        @apply bg-slate-300 p-5 md:w-[50%] w-[90%] ipad:w-[90%] ipad-pro:w-[90%] rounded-md mb-5  mx-auto;
     }
 
     .results-message{
-        @apply ipad-pro:text-4xl ipad:text-4xl next-hub:text-4xl small:text-xl
+        @apply ipad-pro:text-4xl ipad:text-4xl next-hub:text-4xl small:text-xl break-all;
     }
   }

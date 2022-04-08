@@ -6,12 +6,12 @@ import ResultsScreen from "./pages/ResultsScreen";
 
 function App() {
   return (
-    <div className="my-40">
+    <div className="my-20">
       <Router>
         <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/quiz" element={<QuizScreen />} />
-          <Route path="/results" element={<ResultsScreen />} />
+          <Route exact path="/quiz" element={<QuizScreen />} />
+          <Route exact path="/results" element={<ResultsScreen />} />
+          <Route exact path="/" element={<HomeScreen />} />
         </Routes>
       </Router>
     </div>

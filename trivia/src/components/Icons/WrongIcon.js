@@ -5,7 +5,7 @@ function WrongIcon() {
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-7 w-7"
+        className="h-9 w-9"
         viewBox="0 0 20 20"
         fill="currentColor"
         color="#fe0000"

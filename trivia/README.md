@@ -4,6 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+## Clone the project first and foremost
+## Cd into the trivia folder and run npm install to install all dependencies 
+## follow the rest of the directions below
+
+
 In the project directory, you can run:
 
 ### `npm start`

@@ -1,16 +1,28 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import MessageOutput1 from "../components/ScreeMessages/MessageOutput1";
 import ResultsCard from "../components/ResultsCard";
 
 function ResultsScreen() {
+  const [quizResults, setQuizResults] = useState(JSON.parse(localStorage.getItem("arrayQuizClone")))
+
+  //function to calculate the number of correct answers
+  const getCorrectAnswers = () => {
+    const filterAnswers = quizResults.filter(item => item.correct_answer === item.userChoice )
+    return filterAnswers.length
+  }
+
+  useEffect(() => {
+    getCorrectAnswers()
+  }, [])
+  
   return (
     <div>
       <div className="text-center mb-5">
-        <MessageOutput1 message="You Scored 6/15" />
+        <MessageOutput1 message={`You Scored ` + getCorrectAnswers() + "/15"} />
       </div>
 
-      <div className="flex justify-center">
-        <ResultsCard message="Which singer starred in the 2000 romantic comedy. The Next Best Thing? Which singer starred in the 2000 romantic comedy. The Next Best Thing?" />
+      <div className="">
+        <ResultsCard quizResults={quizResults}/>
       </div>
     </div>
   );
