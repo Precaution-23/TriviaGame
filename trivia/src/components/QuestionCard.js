@@ -8,7 +8,7 @@ function QuestionCard() {
   // declaring of states
   const [trueButton, settrueButton] = useState("True");
   const [falseButton, setfalseButton] = useState("False");
-  const [userChoice, setuserChoice] = useState("")
+  const [userChoice, setuserChoice] = useState([])
   const [quizQuestions, setQuizQuestions] = useState(JSON.parse(localStorage.getItem("arrayQuizClone")))
   const [questionNumber, setquestionNumber] = useState(1)
   const [question, setquestion] = useState({})
@@ -43,13 +43,11 @@ function QuestionCard() {
           }
         ];
 
-        console.log("userChoice", userChoice)
-
     // updating the user choice state
     setuserChoice(updatedChoices)
 
     // console.log("updatedCoices", updatedChoices)
-    localStorage.setItem("arrayQuizClone", JSON.stringify(userChoice))
+    localStorage.setItem("arrayQuizClone", JSON.stringify(updatedChoices))
 
      // navigate to the results page after last question is answered
      if(question.id === 15)  navigate('/results')
