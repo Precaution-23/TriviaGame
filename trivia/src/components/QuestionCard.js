@@ -28,7 +28,6 @@ function QuestionCard() {
 
     // fetching a signle quiz to update it with the user answer
     let newArrayClone = quizQuestions.find((quiz) => quiz.id === questionId)
-    // console.log("newArrayClone", newArrayClone)
 
         //declaring an array to hold answers choosen by user
         let updatedChoices = [
@@ -46,13 +45,10 @@ function QuestionCard() {
     // updating the user choice state
     setuserChoice(updatedChoices)
 
-    // console.log("updatedCoices", updatedChoices)
     localStorage.setItem("arrayQuizClone", JSON.stringify(updatedChoices))
 
      // navigate to the results page after last question is answered
      if(question.id === 15)  navigate('/results')
-
-    // console.log("updatedChoices", userChoice)
 
     //updating the state of the question number
     setquestionNumber(questionNumber + 1)
