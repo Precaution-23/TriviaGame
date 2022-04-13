@@ -23,8 +23,9 @@ function HomeScreen() {
             setloading(false)
             navigate('/quiz')
         }catch(error) {
-            console.log(error)
+            alert("There Was An Error In Getting The Quiz Questions. Try Again")
         }
+        
     }
 
   return (

@@ -7,7 +7,7 @@ function ResultsScreen() {
 
   //function to calculate the number of correct answers
   const getCorrectAnswers = () => {
-    const filterAnswers = quizResults.filter(item => item.correct_answer === item.userChoice )
+    const filterAnswers = quizResults.filter(item => item.correct_answer === item.userChoice)
     return filterAnswers.length
   }
 
